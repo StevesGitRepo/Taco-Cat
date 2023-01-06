@@ -26,7 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--primary-color);
+  color: var(--dark-color);
 }
 
 .sticky-footer {
@@ -68,7 +68,7 @@ footer .social > a:hover {
 }
 
 .checklist > li i {
-  color: var(--logoBlue-color);
+  color: var(--secondary-color);
 }
 
 .checklistText {
