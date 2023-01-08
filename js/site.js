@@ -1,20 +1,34 @@
-// Call Hello World
-function helloWorld() {
-  alert('Hello World');
-}
+//Get the string from the page
+//controller function
+const getValue = () => {
+  document.getElementById('alert').classList.add('invisible');
+  let userString = document.getElementById('userString').value;
+  let palindrome = reverseString(userString);
+  displayString(palindrome);
+};
 
-let first = 'Steve';
-let last = 'Szymanski';
-let msg = `Hello + ${first} ${last}`;
+//Reverse the string
+//logic function
+const reverseString = (userString) => {
+  let palindrome = [];
 
-console.log(msg);
+  //reverse a string using a decrementing for loop
+  for (let index = userString.length - 1; index >= 0; index--) {
+    palindrome += userString[index];
+  }
 
-let city = 'Phoenix';
-let state = 'AZ';
-let location = `You are in ${city}, ${state}`;
-console.log(location);
+  // if (palindrome === )
 
-let name = 'Steve Szymanski';
+  return palindrome;
+};
 
-name.substring(6,9) // "Szym"
-name.substring(8,11) //"yman"
+//Display the message back to the user
+//View function
+const displayString = (palindrome) => {
+  //write to the page
+  document.getElementById(
+    'msg'
+  ).innerHTML = `Your reversed string is: ${palindrome}`;
+  //show the alert box
+  document.getElementById('alert').classList.remove('invisible');
+};

@@ -24,6 +24,13 @@
       crossorigin="anonymous"
     ></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka+One&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+
     <link href="css/site.css" rel="stylesheet" />
   </head>
 
@@ -37,7 +44,7 @@
             src="/img/LogoGradientCircled.png"
             width="30"
             class="me-3 mb-1 ms-1"
-          />APP NAME</a
+          /><span class="brandLogo">TACOCAT</span></a
         >
         <button
           class="navbar-toggler"
@@ -83,8 +90,63 @@
     </nav>
     <!-- ==== Main Section ==== -->
 
-    <main class="flex-shrink-0">
-      <div class="container"></div>
+    <main class="main flex-shrink-0">
+      <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-lg-2">
+          <div class="col mb-3">
+            <h1><span class="logoBrand">TACO CAT:</span> A Coding Project</h1>
+            <h4 class="lead">
+              Taco Cat is a palindrome. A Palindrome is a word, phrase, or
+              sequence that reads the same backward as forward. This app checks
+              if your phrase is a palindrome.
+            </h4>
+          </div>
+          <div class="col">
+            <div class="border-1 border-bottom border-danger">
+              <div class="mt-2">
+                <h5 class="">Enter a phrase or word to check:</h5>
+              </div>
+            </div>
+            <form class="row gx-3 gy-2 mt-4">
+              <div class="col">
+                <input
+                  id="userString"
+                  type="text"
+                  class="form-control"
+                  maxlength="50"
+                  placeholder="Enter A String"
+                  aria-label="Enter A String"
+                />
+              </div>
+              <div class="col-12">
+                <!-- <button type="button" id="btnSubmit" class="btn btn-danger">
+                  Reverse It!
+                </button> -->
+                <!-- submit type will not execute javascript -->
+                <a type="button" id="btnSubmit" class="button"> Reverse It! </a>
+              </div>
+              <div
+                class="row alert alert-dark text-light mt-5 ms-1 invisible fade show border-1 border-dark"
+                id="alert"
+                role="alert"
+              >
+                <h1
+                  class="col-9 alert-heading logoBrand d-flex align-items-center"
+                >
+                  Well done!
+                </h1>
+                <img
+                  class="col-3 d-flex justify-content-end w-20 pb-3"
+  
+                  src="img/Tacocat Card Logo Dark.png"
+                />
+                <hr/>
+                <p class="mb-0" id="msg"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
     <!-- ==== Footer Section ==== -->
 
@@ -139,5 +201,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="/js/site.js"></script>
-  </body>
+    <script>
+      document.getElementById('btnSubmit').addEventListener('click', getValue);
+    </script>
 </html>

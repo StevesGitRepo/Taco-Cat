@@ -6,6 +6,8 @@
   --silver-color: rgb(122, 143, 161);
   --logoBlue-color: rgb(125, 100, 250);
   --sinovaBlue-color: rgb(19, 205, 232);
+  --yellow-color: rgb(255, 241, 46);
+  --tacoRed-color: rgb(225, 14, 23);
 }
 
 body {
@@ -39,12 +41,12 @@ h6 {
 footer .social > a {
   padding-right: 0rem;
   color: var(--white-color);
-  opacity: 0.9;
+  opacity: 1;
 }
 
 footer .social > a:hover {
-  opacity: 1;
-  color: var(--logoBlue-color);
+  opacity: 0.85;
+  color: var(--yellow-color);
 }
 
 .footerContact {
@@ -85,4 +87,12 @@ pre[class*='language-'] {
 main > .container {
   padding: 60px 15px 0;
   margin-bottom: 5rem;
+}
+
+.brandLogo {
+  font-family: 'Fredoka One', cursive;
+}
+
+.alert-dark {
+  background-color: var(--tacoRed-color);
 }
