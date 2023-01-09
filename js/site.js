@@ -9,7 +9,7 @@ const getValue = () => {
   let returnObj = checkForPalindrome(userString);
 
   //display out message to the screen
-  displayMessage(palindrome);
+  displayMessage(returnObj);
 };
 //check if string is a palindrome
 const checkForPalindrome = (userString) => {
@@ -31,6 +31,14 @@ const checkForPalindrome = (userString) => {
     returnObj.msg = 'Well done! You entered a palindrome!';
   } else {
     returnObj.msg = 'Sorry! You did not enter a palindrome.';
+  }
+
+  if (revString == 'tenet') {
+    returnObj.msg = '"Tenet" was filmed as a palindrome!';
+  }
+
+  if (revString == 'lol') {
+    returnObj.msg = 'Hah hah! You entered a palindrome!';
   }
 
   returnObj.reversed = revString;
