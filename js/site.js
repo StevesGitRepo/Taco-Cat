@@ -34,7 +34,7 @@ const checkForPalindrome = (userString) => {
   }
 
   if (revString == 'tenet') {
-    returnObj.msg = '"Tenet" was filmed as a palindrome!';
+    returnObj.msg = 'The hit movie "Tenet" was filmed like a palindrome!';
   }
 
   if (revString == 'lol') {
